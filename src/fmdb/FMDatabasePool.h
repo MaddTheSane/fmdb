@@ -29,6 +29,8 @@
  in the main.m file.
  */
 
+@protocol FMDatabasePoolDelegate;
+
 @interface FMDatabasePool : NSObject {
     NSString            *_path;
     
@@ -36,8 +38,6 @@
     
     NSMutableArray      *_databaseInPool;
     NSMutableArray      *_databaseOutPool;
-    
-    __unsafe_unretained id _delegate;
     
     NSUInteger          _maximumNumberOfDatabasesToCreate;
     int                 _openFlags;
@@ -49,7 +49,7 @@
 
 /** Delegate object */
 
-@property (atomic, assign) id delegate;
+@property (atomic, weak) id<FMDatabasePoolDelegate> delegate;
 
 /** Maximum number of databases to create */
 
@@ -178,7 +178,8 @@
  This is a category that defines the protocol for the FMDatabasePool delegate
  */
 
-@interface NSObject (FMDatabasePoolDelegate)
+@protocol FMDatabasePoolDelegate <NSObject>
+@optional
 
 /** Asks the delegate whether database should be added to the pool. 
  

@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
-@interface FMDatabasePoolTests : FMDBTempDBTests
+@interface FMDatabasePoolTests : FMDBTempDBTests <FMDatabasePoolDelegate>
 
 @property FMDatabasePool *pool;
 
