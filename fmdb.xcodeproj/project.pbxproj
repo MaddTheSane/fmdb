@@ -193,7 +193,6 @@
 				BF5D041A18416BB2008C5AA9 /* Tests */,
 				BF5D041718416BB2008C5AA9 /* Frameworks */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
-				EE42910C12B42FFA0088BD94 /* libsqlite3.dylib */,
 			);
 			name = fmdb;
 			sourceTree = "<group>";
@@ -289,6 +288,7 @@
 		BF5D041718416BB2008C5AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE42910C12B42FFA0088BD94 /* libsqlite3.dylib */,
 				BF5D041818416BB2008C5AA9 /* XCTest.framework */,
 				6290CBB6188FE836009790F8 /* Foundation.framework */,
 				6290CBC6188FE837009790F8 /* UIKit.framework */,
