@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "sqlite3.h"
+#include <sqlite3.h>
 #import "FMResultSet.h"
 #import "FMDatabasePool.h"
 
